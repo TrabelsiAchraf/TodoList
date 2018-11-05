@@ -14,19 +14,51 @@ class TasksViewModel {
     var alertString: String = ""
     
     // Dependecy Injection
-    init(service: APITasksServiceProtocol) {
+    init(service: APITasksServiceProtocol = APITasksService()) {
         self.service = service
     }
     
-    func initFetchTasks() {
+    func startFetchTasks() {
         service.fetchTasks { [weak self] (success, tasks, error) in
             guard let self = self else { return }
             if let _ = error {
                 self.alertString = (error?.rawValue)!
                 return
             } else {
-                #warning("TODO: add fetch logic !")
+                self.handleTasks(tasks)
             }
         }
     }
+    
+    private func handleTasks(_ tasks: [Task]) {
+        var tasksTmp = [TaskCellViewModel]()
+        for task in tasks {
+            tasksTmp.append(createTaskCellViewModel(task))
+        }
+        self.cellsViewModel = tasksTmp
+    }
+    
+    private func createTaskCellViewModel(_ task: Task) -> TaskCellViewModel {
+        return TaskCellViewModel(title: "-> \(task.description)")
+    }
+    
+    private var cellsViewModel: [TaskCellViewModel] = [TaskCellViewModel]() {
+        didSet {
+            self.reloadTableView?()
+        }
+    }
+    
+    var numberOfCell: Int {
+        return cellsViewModel.count
+    }
+    
+    func getCellViewModel(at indexPath: IndexPath) -> TaskCellViewModel {
+        return cellsViewModel[indexPath.row]
+    }
+    
+    var reloadTableView: (()->())?
+}
+
+struct TaskCellViewModel {
+    let title: String
 }

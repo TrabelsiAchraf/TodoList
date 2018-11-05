@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE10BF6C218723AC007A9DFC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE10BF61218723AC007A9DFC /* HomeViewController.xib */; };
-		DE10BF6D218723AC007A9DFC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10BF62218723AC007A9DFC /* HomeViewController.swift */; };
 		DE10BF6E218723AC007A9DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE10BF66218723AC007A9DFC /* Assets.xcassets */; };
 		DE10BF6F218723AC007A9DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE10BF67218723AC007A9DFC /* LaunchScreen.storyboard */; };
 		DE10BF70218723AC007A9DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10BF69218723AC007A9DFC /* AppDelegate.swift */; };
@@ -18,6 +16,11 @@
 		DE3258B1219030840080D129 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3258AE219030840080D129 /* TasksViewModel.swift */; };
 		DE3258B52190310C0080D129 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3258B32190310C0080D129 /* APIServiceTests.swift */; };
 		DE3258B62190310C0080D129 /* TasksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3258B42190310C0080D129 /* TasksViewModelTests.swift */; };
+		DE3258B9219035E50080D129 /* TasksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3258B7219035E50080D129 /* TasksListViewController.swift */; };
+		DE3258BA219035E50080D129 /* TasksListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE3258B8219035E50080D129 /* TasksListViewController.xib */; };
+		DE3258BE219036900080D129 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3258BC219036900080D129 /* TaskTableViewCell.swift */; };
+		DE3258BF219036900080D129 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE3258BD219036900080D129 /* TaskTableViewCell.xib */; };
+		DE3258C12190437A0080D129 /* TasksViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3258C02190437A0080D129 /* TasksViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DE10BF61218723AC007A9DFC /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		DE10BF62218723AC007A9DFC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DE10BF66218723AC007A9DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE10BF68218723AC007A9DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE10BF69218723AC007A9DFC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +43,11 @@
 		DE3258AE219030840080D129 /* TasksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		DE3258B32190310C0080D129 /* APIServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		DE3258B42190310C0080D129 /* TasksViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewModelTests.swift; sourceTree = "<group>"; };
+		DE3258B7219035E50080D129 /* TasksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewController.swift; sourceTree = "<group>"; };
+		DE3258B8219035E50080D129 /* TasksListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasksListViewController.xib; sourceTree = "<group>"; };
+		DE3258BC219036900080D129 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		DE3258BD219036900080D129 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		DE3258C02190437A0080D129 /* TasksViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewControllerTests.swift; sourceTree = "<group>"; };
 		DEC46BB321870BC200EA9A69 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC46BC521870BC400EA9A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC46BCA21870BC400EA9A69 /* TodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,8 +75,6 @@
 		DE10BF60218723AC007A9DFC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				DE10BF61218723AC007A9DFC /* HomeViewController.xib */,
-				DE10BF62218723AC007A9DFC /* HomeViewController.swift */,
 				DE10BF63218723AC007A9DFC /* AddTask */,
 				DE10BF64218723AC007A9DFC /* FetchTasks */,
 			);
@@ -157,6 +161,9 @@
 		DE3258AC219030830080D129 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE3258BB2190367B0080D129 /* TaskTableViewCell */,
+				DE3258B7219035E50080D129 /* TasksListViewController.swift */,
+				DE3258B8219035E50080D129 /* TasksListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,8 +181,18 @@
 			children = (
 				DE3258B32190310C0080D129 /* APIServiceTests.swift */,
 				DE3258B42190310C0080D129 /* TasksViewModelTests.swift */,
+				DE3258C02190437A0080D129 /* TasksViewControllerTests.swift */,
 			);
 			path = FetchTasksTests;
+			sourceTree = "<group>";
+		};
+		DE3258BB2190367B0080D129 /* TaskTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE3258BC219036900080D129 /* TaskTableViewCell.swift */,
+				DE3258BD219036900080D129 /* TaskTableViewCell.xib */,
+			);
+			path = TaskTableViewCell;
 			sourceTree = "<group>";
 		};
 		DEC46BAA21870BC200EA9A69 = {
@@ -298,8 +315,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE10BF6F218723AC007A9DFC /* LaunchScreen.storyboard in Resources */,
+				DE3258BA219035E50080D129 /* TasksListViewController.xib in Resources */,
 				DE10BF6E218723AC007A9DFC /* Assets.xcassets in Resources */,
-				DE10BF6C218723AC007A9DFC /* HomeViewController.xib in Resources */,
+				DE3258BF219036900080D129 /* TaskTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,11 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3258BE219036900080D129 /* TaskTableViewCell.swift in Sources */,
 				DE10BF70218723AC007A9DFC /* AppDelegate.swift in Sources */,
 				DE3258B1219030840080D129 /* TasksViewModel.swift in Sources */,
 				DE3258AF219030840080D129 /* APITasksService.swift in Sources */,
 				DE3258B0219030840080D129 /* Task.swift in Sources */,
-				DE10BF6D218723AC007A9DFC /* HomeViewController.swift in Sources */,
+				DE3258B9219035E50080D129 /* TasksListViewController.swift in Sources */,
 				DE10BF71218723AC007A9DFC /* TodoList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE3258B52190310C0080D129 /* APIServiceTests.swift in Sources */,
+				DE3258C12190437A0080D129 /* TasksViewControllerTests.swift in Sources */,
 				DE3258B62190310C0080D129 /* TasksViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

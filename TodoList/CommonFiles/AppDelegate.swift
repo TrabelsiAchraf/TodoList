@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupApplication() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let homeViewController = HomeViewController()
+        let tasksListViewController = TasksListViewController()
         if let window = window {
-            window.rootViewController = homeViewController
+            window.rootViewController = tasksListViewController
             window.makeKeyAndVisible()
         }
     }

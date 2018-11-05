@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import TodoApp
+@testable import TodoList
 
 class TasksViewModelTests: XCTestCase {
     
@@ -27,7 +27,7 @@ class TasksViewModelTests: XCTestCase {
     
     func test_viewModelShouldAskServiceForFetchTasks() {
         // When
-        sut.initFetchTasks()
+        sut.startFetchTasks()
         // Then
         XCTAssert(mockAPITasksService.fetchTaksMethodIsCalled)
     }
@@ -37,7 +37,7 @@ class TasksViewModelTests: XCTestCase {
         let error = APIServiceError.noInternet
         
         // When
-        sut.initFetchTasks()
+        sut.startFetchTasks()
         mockAPITasksService.fetchFail(error: error)
         
         // Then
