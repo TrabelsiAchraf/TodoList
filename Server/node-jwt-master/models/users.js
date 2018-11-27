@@ -12,12 +12,21 @@ const userSchema = new Schema({
     type: 'String',
     required: true,
     trim: true,
-    unique: true
+    unique: false
+  },
+  email: {
+    type: 'String',
+    required: true,
+    unique: true,
   },
   password: {
     type: 'String',
     required: true,
     trim: true
+  },
+  urlPicture: {
+    type: 'String',
+    required: false
   }
 });
 

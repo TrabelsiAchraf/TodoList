@@ -44,6 +44,15 @@
                         <action selector="loginButtonDidClicked:" destination="-1" eventType="touchUpInside" id="Abq-ys-dOh"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIH-sp-Pz6">
+                    <rect key="frame" x="40" y="284" width="295" height="39"/>
+                    <state key="normal" title="Not Registred Yet">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="goToRegisterViewButtonDidClicked:" destination="-1" eventType="touchUpInside" id="zvR-uT-Bve"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -52,11 +61,16 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0gP-3d-S9Q" secondAttribute="trailing" constant="40" id="5X9-H7-mif"/>
                 <constraint firstItem="0gP-3d-S9Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="8O0-5b-5e5"/>
                 <constraint firstItem="hge-Tj-NHB" firstAttribute="leading" secondItem="ssk-0H-PQ9" secondAttribute="leading" id="8yd-4X-ft6"/>
+                <constraint firstItem="wIH-sp-Pz6" firstAttribute="centerX" secondItem="hge-Tj-NHB" secondAttribute="centerX" id="H3C-4t-k25"/>
+                <constraint firstItem="wIH-sp-Pz6" firstAttribute="trailing" secondItem="hge-Tj-NHB" secondAttribute="trailing" id="J2t-rd-wDV"/>
                 <constraint firstItem="0gP-3d-S9Q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="MHM-C6-xbM"/>
                 <constraint firstItem="hge-Tj-NHB" firstAttribute="top" secondItem="ssk-0H-PQ9" secondAttribute="bottom" constant="33" id="QO9-lc-K6W"/>
+                <constraint firstItem="wIH-sp-Pz6" firstAttribute="top" secondItem="hge-Tj-NHB" secondAttribute="bottom" constant="40" id="Uza-rN-ae6"/>
                 <constraint firstItem="ssk-0H-PQ9" firstAttribute="top" secondItem="0gP-3d-S9Q" secondAttribute="bottom" constant="32" id="fUO-lr-PSP"/>
                 <constraint firstItem="hge-Tj-NHB" firstAttribute="trailing" secondItem="ssk-0H-PQ9" secondAttribute="trailing" id="haf-Ex-qP1"/>
                 <constraint firstItem="ssk-0H-PQ9" firstAttribute="centerX" secondItem="0gP-3d-S9Q" secondAttribute="centerX" id="ihY-1c-qTf"/>
+                <constraint firstItem="wIH-sp-Pz6" firstAttribute="leading" secondItem="hge-Tj-NHB" secondAttribute="leading" id="noJ-7N-DDu"/>
+                <constraint firstItem="wIH-sp-Pz6" firstAttribute="height" secondItem="hge-Tj-NHB" secondAttribute="height" id="p5A-a2-1GX"/>
                 <constraint firstItem="hge-Tj-NHB" firstAttribute="centerX" secondItem="ssk-0H-PQ9" secondAttribute="centerX" id="pWg-gG-xz3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 // const connUri = process.env.MONGO_LOCAL_CONN_URL;
-const connUri = 'mongodb://localhost:3000';
+const connUri = 'mongodb://localhost:27017';
 const User = require('../models/users');
 
 module.exports = {
@@ -12,13 +12,14 @@ module.exports = {
       let result = {};
       let status = 201;
       if (!err) {
-        const { name, password } = req.body;
-        const user = new User({ name, password}); // document = instance of a model
+        const { name, email, password } = req.body;
+        const urlPicture = "https://pbs.twimg.com/profile_images/765367699912392704/dY7-_hnB_400x400.jpg"; // Hack
+        const user = new User({ name, email, password, urlPicture }); // document = instance of a model
         // TODO: We can hash the password here as well before we insert
         user.save((err, user) => {
           if (!err) {
             result.status = status;
-            result.result = user;
+            result.ReceivedUser = user;
           } else {
             status = 500;
             result.status = status;
@@ -32,7 +33,9 @@ module.exports = {
         result.error = err;
         res.status(status).send(result);
       }
-    });
+    })
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log('Mongo Error:'));
   },
 
   login: (req, res) => {
@@ -51,7 +54,7 @@ module.exports = {
                 // Create a token
                 const payload = { user: user.name };
                 const options = { expiresIn: '2d', issuer: 'https://scotch.io' };
-                const secret = process.env.JWT_SECRET;
+                const secret = "p@ssw0rd";//process.env.JWT_SECRET;
                 const token = jwt.sign(payload, secret, options);
 
                 result.token = token;
@@ -82,7 +85,9 @@ module.exports = {
         result.error = err;
         res.status(status).send(result);
       }
-    });
+    })
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log('Mongo Error:'));
   },
 
   getAll: (req, res) => {
@@ -116,6 +121,8 @@ module.exports = {
         result.error = err;
         res.status(status).send(result);
       }
-    });
+    })
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log('Mongo Error:'));
   }
 };

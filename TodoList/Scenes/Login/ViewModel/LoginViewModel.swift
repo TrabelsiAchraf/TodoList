@@ -10,15 +10,15 @@ import Foundation
 
 class LoginViewModel {
     
-    var service: APITasksServiceProtocol
+    var service: APILoginServiceProtocol
     var alertString: String = ""
     
     // Dependency Injection
-    init(_ service: APITasksServiceProtocol = APITasksService()) {
+    init(_ service: APILoginServiceProtocol = APILoginService()) {
         self.service = service
     }
     
-    func startLogin(with user: SendUser) {
+    func startLogin(with user: LoginUser) {
         service.login(user: user) { [weak self] (success, user, error) in
             guard let self = self else { return }
             if let _ = error {
@@ -27,6 +27,12 @@ class LoginViewModel {
             } else {
                 self.refreshView?()
             }
+        }
+    }
+    
+    func startRegister(with user: SendUser) {
+        self.service.register(user: user) { (success, user, error) in
+            
         }
     }
     

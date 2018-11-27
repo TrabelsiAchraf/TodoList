@@ -28,18 +28,22 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func login(with user: SendUser) {
+    func login(with user: LoginUser) {
         viewModel.startLogin(with: user)
     }
     
     private func handleLogin() {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-        
+        login(with: LoginUser(email: email, password: password))
     }
     
     @IBAction func loginButtonDidClicked(_ sender: UIButton) {
         handleLogin()
     }
     
+    @IBAction func goToRegisterViewButtonDidClicked(_ sender: UIButton) {
+        let registerViewController = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+        self.navigationController?.pushViewController(registerViewController, animated: true)
+    }
 }

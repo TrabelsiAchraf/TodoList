@@ -6,12 +6,13 @@ module.exports = {
     let result;
     if (authorizationHeaader) {
       const token = req.headers.authorization.split(' ')[1]; // Bearer <token>
+      console.log(token);
       const options = {
         expiresIn: '2d',
         issuer: 'https://scotch.io'
       };
       try {
-        result = jwt.verify(token, process.env.JWT_SECRET, options);
+        result = jwt.verify(token, "p@ssw0rd", options);
         req.decoded = result;
         next();
       } catch (err) {
@@ -26,3 +27,5 @@ module.exports = {
     }
   }
 };
+
+// process.env.JWT_SECRET
